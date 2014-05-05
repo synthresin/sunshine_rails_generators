@@ -1,4 +1,5 @@
 require 'rails/generators/named_base'
+require 'rails/generators/resource_helpers'
 
 module SunshineRailsGenerators
   class ScaffoldAdminControllerGenerator < Rails::Generators::NamedBase
@@ -11,7 +12,7 @@ module SunshineRailsGenerators
 	  #   directory ".", "app/views/admin/#{plural_name}"
 	  # end
 
-	  include ResourceHelpers
+	  include Rails::Generators::ResourceHelpers
 
     check_class_collision suffix: "Controller"
 
