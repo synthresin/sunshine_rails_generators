@@ -6,8 +6,9 @@ module SunshineRailsGenerators
   	namespace "su:scaffold_admin_controller"
   	source_root File.expand_path("../templates", __FILE__)
   	
-	  def copy_initializer_file
-	    copy_file "initializer.rb", "config/initializers/#{file_name}.rb"
+	  def copy_templates
+	    #copy_file "initializer.rb", "config/initializers/#{file_name}.rb"
+	    directory ".", "app/views/admin/#{plural_name}"
 	  end
   end
 end
