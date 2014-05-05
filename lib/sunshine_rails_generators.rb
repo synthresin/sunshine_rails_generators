@@ -1,4 +1,3 @@
-require 'rails'
 require "sunshine_rails_generators/version"
 
 module SunshineRailsGenerators
