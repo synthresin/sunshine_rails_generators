@@ -1,7 +1,7 @@
-require 'rails/generators/base'
+require 'rails/generators/named_base'
 
 module SunshineRailsGenerators
-  class ScaffoldAdminControllerGenerator < Rails::Generators::Base
+  class ScaffoldAdminControllerGenerator < Rails::Generators::NamedBase
 
   	namespace "su:scaffold_admin_controller"
   	
