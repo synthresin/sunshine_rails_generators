@@ -1,6 +1,6 @@
 require 'rails/generators/base'
 
-module SunshineRailsGenerators
+module Su
   class ScaffoldAdminControllerGenerator < Rails::Generators::Base
 
     def create_initializer_file
