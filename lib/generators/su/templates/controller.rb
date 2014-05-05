@@ -29,7 +29,7 @@ class Admin::<%= controller_class_name %>Controller < Admin::ApplicationControll
 
   def update
     if @<%= orm_instance.update("#{singular_table_name}_params") %>
-      redirect_to admin_<%= index_helper %>_url, notice: <%= "'#{human_name} was successfully updated.'" %>
+      redirect_to edit_admin_<%= singular_table_name %>_url(@<%= singular_table_name %>), notice: <%= "'#{human_name} was successfully updated.'" %>
     else
       render :edit
     end
