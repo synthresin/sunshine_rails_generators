@@ -1,5 +1,5 @@
 require "sunshine_rails_generators/version"
-require "generators"
+require "generators/scaffold_admin_controller"
 
 module SunshineRailsGenerators
   def test
