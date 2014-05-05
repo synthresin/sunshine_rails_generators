@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SunshineRailsGenerators::VERSION
   spec.authors       = ["synthresin"]
   spec.email         = ["synthresin@me.com"]
-  spec.summary       = %q{Rails generators for typical client job of sunshine underground.}
-  spec.description   = %q{Rails generators for typical client job of sunshine underground.}
+  spec.summary       = "Rails generators for typical client job of sunshine underground."
+  spec.description   = "Rails generators for typical client job of sunshine underground."
   spec.homepage      = "http://sunshineunderground.kr"
   spec.license       = "MIT"
 
