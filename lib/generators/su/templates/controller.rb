@@ -47,7 +47,7 @@ class Admin::<%= controller_class_name %>Controller < Admin::ApplicationControll
 
     def <%= "#{singular_table_name}_params" %>
       <%- if attributes_names.empty? -%>
-      params[:<%= singular_table_name %>]
+      params.require(:<%= singular_table_name %>).permit()
       <%- else -%>
       params.require(:<%= singular_table_name %>).permit(<%= attributes_names.map { |name| ":#{name}" }.join(', ') %>)
       <%- end -%>
