@@ -1,8 +1,9 @@
-require 'rails/generators/erb'
+require 'rails/generators'
+require 'rails/generators/named_base'
 require 'rails/generators/resource_helpers'
 
 module SunshineRailsGenerators
-  class ScaffoldAdminViewGenerator < Erb::Generators::Base
+  class ScaffoldAdminViewGenerator < Rails::Generators::NamedBase
 
   	namespace "su:scaffold_admin_view"
   	source_root File.expand_path("../templates", __FILE__)
@@ -22,10 +23,10 @@ module SunshineRailsGenerators
 
     def copy_view_files
       available_views.each do |view|
-        formats.each do |format|
-          filename = filename_with_extensions(view, format)
-          template filename, File.join("app/views/admin", controller_file_path, filename)
-        end
+        
+        filename = [view, :html, :erb].compact.join(".")
+        template filename, File.join("app/views/admin", controller_file_path, filename)
+    
       end
     end
 
