@@ -3,9 +3,9 @@ require 'rails/generators/named_base'
 require 'rails/generators/resource_helpers'
 
 module SunshineRailsGenerators
-  class ScaffoldAdminControllerGenerator < Rails::Generators::NamedBase
+  class ScaffoldAdminViewGenerator < Rails::Generators::NamedBase
 
-  	namespace "su:scaffold_admin_controller"
+  	namespace "su:scaffold_admin_view"
   	source_root File.expand_path("../templates", __FILE__)
   	
 	  # def copy_view_templates
@@ -15,21 +15,28 @@ module SunshineRailsGenerators
 
 	  include Rails::Generators::ResourceHelpers
 
-    check_class_collision suffix: "Controller"
-
-    class_option :orm, banner: "NAME", type: :string, required: true,
-                       desc: "ORM to generate the controller for"
-
     argument :attributes, type: :array, default: [], banner: "field:type field:type"
 
-    def create_controller_files
-      template "controller.rb", File.join('app/controllers/admin', "#{controller_file_name}_controller.rb")
+    def create_root_folder
+      empty_directory File.join("app/views/admin", controller_file_path)
+    end
+
+    def copy_view_files
+      available_views.each do |view|
+        formats.each do |format|
+          filename = filename_with_extensions(view, format)
+          template filename, File.join("app/views/admin", controller_file_path, filename)
+        end
+      end
+    end
+
+  protected
+
+    def available_views
+      %w(index edit show new _form)
     end
 
     #hook_for :admin_application_controller#, as: :scaffold
-
-
-    Rails::Generators.invoke "su:admin_application_controller"
 
     # Invoke the helper using the controller name (pluralized)
     # hook_for :helper, as: :scaffold do |invoked|
