@@ -1,10 +1,8 @@
-require 'rails/generators'
-require 'rails/generators/named_base'
 require 'rails/generators/erb'
 require 'rails/generators/resource_helpers'
 
 module SunshineRailsGenerators
-  class ScaffoldAdminViewGenerator < Rails::Generators::NamedBase
+  class ScaffoldAdminViewGenerator < Erb::Generators::Base
 
   	namespace "su:scaffold_admin_view"
   	source_root File.expand_path("../templates", __FILE__)
