@@ -25,7 +25,9 @@ module SunshineRailsGenerators
       template "controller.rb", File.join('app/controllers/admin', "#{controller_file_name}_controller.rb")
     end
 
-    hook_for :admin_application_controller#, as: :scaffold
+    #hook_for :admin_application_controller#, as: :scaffold
+
+    invoke :admin_application_controller
 
     # Invoke the helper using the controller name (pluralized)
     # hook_for :helper, as: :scaffold do |invoked|
