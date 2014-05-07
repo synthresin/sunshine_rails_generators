@@ -23,10 +23,10 @@ module SunshineRailsGenerators
 
     def copy_view_files
       available_views.each do |view|
-        formats.each do |format|
-          filename = filename_with_extensions(view, format)
-          template filename, File.join("app/views/admin", controller_file_path, filename)
-        end
+        
+        filename = filename_with_extensions(view, 'html.erb')
+        template filename, File.join("app/views/admin", controller_file_path, filename)
+        
       end
     end
 
