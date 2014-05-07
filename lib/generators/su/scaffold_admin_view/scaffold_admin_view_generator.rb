@@ -26,7 +26,6 @@ module SunshineRailsGenerators
         
         filename = [view, :html, :erb].compact.join(".")
         template filename, File.join("app/views/admin", controller_file_path, filename)
-    
       end
     end
 
