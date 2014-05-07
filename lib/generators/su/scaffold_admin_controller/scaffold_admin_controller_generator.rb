@@ -29,7 +29,7 @@ module SunshineRailsGenerators
 
     #hook_for :admin_application_controller#, as: :scaffold
 
-    Rails::Generators.invoke "su:admin_application_controller" if false
+    Rails::Generators.invoke "su:admin_application_controller" if true
 
     # Invoke the helper using the controller name (pluralized)
     # hook_for :helper, as: :scaffold do |invoked|
