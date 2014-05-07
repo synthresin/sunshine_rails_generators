@@ -1,3 +1,4 @@
+require 'rails/generators'
 require 'rails/generators/named_base'
 require 'rails/generators/resource_helpers'
 
@@ -27,7 +28,7 @@ module SunshineRailsGenerators
 
     #hook_for :admin_application_controller#, as: :scaffold
 
-    invoke "su:admin_application_controller"
+    Rails::Generators.invoke "su:admin_application_controller"
 
     # Invoke the helper using the controller name (pluralized)
     # hook_for :helper, as: :scaffold do |invoked|
