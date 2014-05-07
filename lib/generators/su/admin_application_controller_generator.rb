@@ -22,7 +22,7 @@ module SunshineRailsGenerators
     # argument :attributes, type: :array, default: [], banner: "field:type field:type"
 
     def create_controller_files
-      template "controller.rb", File.join('app/controllers/admin', "admin_application_controller.rb")
+      template "admin_application_controller.rb", File.join('app/controllers/admin', "admin_application_controller.rb")
     end
 
     # hook_for :template_engine, :test_framework, as: :scaffold
