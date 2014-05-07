@@ -1,5 +1,6 @@
 require 'rails/generators'
 require 'rails/generators/named_base'
+require 'rails/generators/erb'
 require 'rails/generators/resource_helpers'
 
 module SunshineRailsGenerators
@@ -23,10 +24,10 @@ module SunshineRailsGenerators
 
     def copy_view_files
       available_views.each do |view|
-        
-        filename = filename_with_extensions(view, 'html.erb')
-        template filename, File.join("app/views/admin", controller_file_path, filename)
-        
+        formats.each do |format|
+          filename = filename_with_extensions(view, format)
+          template filename, File.join("app/views/admin", controller_file_path, filename)
+        end
       end
     end
 
