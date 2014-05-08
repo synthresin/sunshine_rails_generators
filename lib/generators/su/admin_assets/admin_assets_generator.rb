@@ -17,8 +17,8 @@ module SunshineRailsGenerators
     end
 
     def create_admin_asset_directory
-      empty_directory 'app/assets/javascripts/admin'
-      empty_directory 'app/assets/stylesheets/admin'
+      empty_directory_with_keep_file 'app/assets/javascripts/admin'
+      empty_directory_with_keep_file 'app/assets/stylesheets/admin'
     end
 
     def create_admin_style
