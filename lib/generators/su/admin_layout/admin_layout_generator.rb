@@ -10,5 +10,11 @@ module SunshineRailsGenerators
     def create_admin_layout
       template "admin.html.erb.tt", File.join('app/views/layouts', "admin.html.erb")
     end
+
+    protected
+
+    def app_name
+      File.basename(destination_root)).tr('\\', '').tr(". ", "_")
+    end
   end
 end
