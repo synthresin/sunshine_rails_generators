@@ -2,13 +2,19 @@
   <div class="col-xs-12 col-sm-12">
     <h1><%= plural_table_name %></h1>
     <ul class="list-group">
-      <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-        <li class="list-group-item">
-          <%%= link_to <%= singular_table_name %>, edit_admin_<%= singular_table_name %>_path(<%= singular_table_name %>) %>
-          <%%= link_to '삭제', admin_<%= singular_table_name %>_path(<%= singular_table_name %>), data: {method: 'delete', confirm: '정말로 삭제하시겠습니까?' }, class: 'text-danger pull-right' %>
-        </li>
+      <%% if @<%= plural_table_name %>.presence %>
+        <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+          <li class="list-group-item">
+            <%%= link_to <%= singular_table_name %>, edit_admin_<%= singular_table_name %>_path(<%= singular_table_name %>) %>
+            <%%= link_to 'Delete', admin_<%= singular_table_name %>_path(<%= singular_table_name %>), data: {method: 'delete', confirm: 'Are you sure?' }, class: 'text-danger pull-right' %>
+          </li>
+        <%% end %>
+      <%% else %>
+        <li class="list-group-item">No <%= human_name %></li>
       <%% end %>
+
+      
     </ul>
-    <%%= link_to '새 <%= human_name %>', new_admin_<%= singular_table_name %>_path %>
+    <%%= link_to 'New <%= human_name %>', new_admin_<%= singular_table_name %>_path, class: 'btn btn-primary' %>
   </div>
 </div>
