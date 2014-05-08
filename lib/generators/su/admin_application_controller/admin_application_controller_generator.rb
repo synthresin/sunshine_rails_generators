@@ -22,7 +22,7 @@ module SunshineRailsGenerators
     # argument :attributes, type: :array, default: [], banner: "field:type field:type"
 
     def create_admin_controller_directory
-      empty_directory_with_keep_file 'app/controllers/admin'
+      empty_directory 'app/controllers/admin'
     end
 
     def create_controller_files
