@@ -21,6 +21,11 @@ module SunshineRailsGenerators
       app_name.gsub(/\W/, '_').squeeze('_').camelize
     end
 
+    def app_const_base_upcased
+      app_name.gsub(/\W/, '_').squeeze('_').upcase
+    end
+
     alias :camelized :app_const_base
+    alias :upcased :app_const_base_upcased
   end
 end
