@@ -14,7 +14,13 @@ module SunshineRailsGenerators
     protected
 
     def app_name
-      File.basename(destination_root).tr('\\', '').tr(". ", "_").gsub(/\W/, '_').squeeze('_').camelize
+      File.basename(destination_root).tr('\\', '').tr(". ", "_")
     end
+
+    def app_const_base
+      app_name.gsub(/\W/, '_').squeeze('_').camelize
+    end
+
+    alias :camelized :app_const_base
   end
 end

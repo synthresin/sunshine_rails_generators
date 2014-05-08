@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= app_name %></title>
+  <title><%= camelized %></title>
   <%- if options[:skip_javascript] -%>
   <%%= stylesheet_link_tag    'admin', media: 'all' %>
   <%- else -%>
