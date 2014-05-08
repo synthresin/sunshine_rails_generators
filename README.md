@@ -1,6 +1,7 @@
-# SunshineRailsGenerators
+# Sunshine Rails Generators
 
-TODO: Write a gem description
+A set of rails generators which handles typical jobs for client project of sunshine underground.
+you can inspect these codes to know how to write custom rails generator gem.
 
 ## Installation
 
@@ -18,7 +19,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To Install assets, controllers and layout for admin panel
+
+    rails g su:admin_install
+
+To scaffold controller and views for admin panel
+
+    rails g su:scaffold_admin_controller CONTROLLER_NAME
 
 ## Contributing
 
