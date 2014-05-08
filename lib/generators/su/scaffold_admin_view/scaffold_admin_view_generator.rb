@@ -27,7 +27,7 @@ module SunshineRailsGenerators
   protected
 
     def available_views
-      %w(index edit show new _form)
+      %w(index edit new _form)
     end
 
   end
