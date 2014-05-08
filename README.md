@@ -5,17 +5,13 @@ you can inspect these codes to know how to write custom rails generator gem.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your rails application's Gemfile:
 
     gem 'sunshine_rails_generators'
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install sunshine_rails_generators
 
 ## Usage
 
