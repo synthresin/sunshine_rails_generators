@@ -12,8 +12,8 @@ module SunshineRailsGenerators
       template "admin.css", File.join('app/assets/stylesheets', "admin.css")
     end
 
-    def add_files_to_asset_pipeline
-      # production.rb 에 추가하기
+    def add_initializer
+      template "assets.rb", File.join('config/initializers', "assets.rb")
     end
 
     def create_admin_asset_directory
