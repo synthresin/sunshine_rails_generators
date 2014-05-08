@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= camelized %></title>
+  <title><%= File.basename(destination_root)).tr('\\', '').tr(". ", "_")%></title>
   <%- if options[:skip_javascript] -%>
   <%%= stylesheet_link_tag    'admin', media: 'all' %>
   <%- else -%>
