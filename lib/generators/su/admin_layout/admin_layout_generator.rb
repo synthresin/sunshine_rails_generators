@@ -14,7 +14,7 @@ module SunshineRailsGenerators
     protected
 
     def app_name
-      File.basename(destination_root)).tr('\\', '').tr(". ", "_")
+      File.basename(destination_root).tr('\\', '').tr(". ", "_")
     end
   end
 end
