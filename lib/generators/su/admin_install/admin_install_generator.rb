@@ -9,6 +9,7 @@ module SunshineRailsGenerators
 
     Rails::Generators.invoke "su:admin_assets"
     Rails::Generators.invoke "su:admin_layout"
+    Rails::Generators.invoke "su:admin_template"
     Rails::Generators.invoke "su:admin_application_controller"
 
   end
