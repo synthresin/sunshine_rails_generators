@@ -35,3 +35,37 @@
     <%%= f.submit %>
   </div>
 <%% end %>
+
+
+
+
+<%= render 'flash', model: @post %>
+<%= form_for [:admin, @post], html: {role: 'form'} do |f| %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="form-group">
+            <%= f.label :title, 'Title' %>
+            <%= f.text_field :title, class: 'form-control' %>
+          </div>  
+        </div>
+        <div class="col-xs-12 col-sm-12">
+          <div class="form-group">
+            <%= f.label :body, 'Body' %>
+            <%= f.text_area :body, rows: 15,   class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= f.hidden_field :type %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+      <div class="form-group">
+        <%= f.submit '확인', class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+  
+<% end %>
