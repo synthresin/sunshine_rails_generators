@@ -3,7 +3,7 @@ require 'rails/generators/resource_helpers'
 
 module SunshineRailsGenerators
   module Admin
-    class TemplateGenerator < Rails::Generators::Base
+    class PartialsGenerator < Rails::Generators::Base
 
       #namespace "su:admin:template"
       source_root File.expand_path("../templates", __FILE__)
