@@ -8,7 +8,7 @@
           <div class="form-group">
   <% if attribute.attribute.reference? -%>
             <%%= f.label :<%= attribute.column_name %> %><br>
-            <%%= f.<%= attribute.field_type %> :<%= attribute.column_name, class: 'form-control' %> %>
+            <%%= f.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'form-control' %>
   <% else -%>
             <%%= f.label :<%= attribute.name %> %><br>
             <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, class: 'form-control' %>
