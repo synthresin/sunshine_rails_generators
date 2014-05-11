@@ -12,8 +12,6 @@
       <%% else %>
         <li class="list-group-item">No <%= human_name %></li>
       <%% end %>
-
-      
     </ul>
     <%%= link_to 'New <%= human_name %>', new_admin_<%= singular_table_name %>_path, class: 'btn btn-primary' %>
   </div>

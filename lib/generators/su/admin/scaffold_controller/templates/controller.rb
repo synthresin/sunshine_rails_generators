@@ -4,7 +4,7 @@ class Admin::<%= controller_class_name %>Controller < Admin::ApplicationControll
   before_action :set_<%= singular_table_name %>, only: [:show, :edit, :update, :destroy]
 
   def index
-    @<%= plural_table_name %> = <%= orm_class.all(class_name) %>
+    @<%= plural_table_name %> = <%= orm_class.all(class_name) %>.paginate(:page => params[:page], :per_page => 12)
   end
 
   def show
