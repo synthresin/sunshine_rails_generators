@@ -5,7 +5,7 @@ module SunshineRailsGenerators
   module Admin
     class TemplateGenerator < Rails::Generators::Base
 
-      namespace "su:admin:template"
+      #namespace "su:admin:template"
       source_root File.expand_path("../templates", __FILE__)
 
       def create_root_folder
