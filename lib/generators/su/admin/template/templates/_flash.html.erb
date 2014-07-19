@@ -1,6 +1,6 @@
 <div class="flash-container">
 	<%% if model.errors.any? %>
-		<div class="alert alert-warning">
+		<div class="alert alert-danger">
 			<%% model.errors.each do |key, value| %>
 				<div><%%= value %></div>
 			<%% end %>
